@@ -5,6 +5,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.9](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/usage@1.0.8...@my-scope/usage@1.0.9) (2020-08-28)
 
+
+### Bug Fixes
+
+* jallajalla6 ([02b3bc2](https://github.com/boeriksson/conventionalCommits/commit/02b3bc2cc8a93172a19db572960a7770eb9fe024))
+
+
+
+
+
+## [1.0.9](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/usage@1.0.8...@my-scope/usage@1.0.9) (2020-08-28)
+
 **Note:** Version bump only for package @my-scope/usage
 
 

@@ -1,12 +1,12 @@
 {
   "name": "@my-scope/usage",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "dependencies": {
     "@my-scope/alpha": "^1.0.4",
-    "@my-scope/beta": "^2.0.0"
+    "@my-scope/beta": "^2.0.2"
   },
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
-  "gitHead": "9f5fee52c9753e6608cbcf1c42e2fc5b5c41ef10"
+  "gitHead": "02b3bc2cc8a93172a19db572960a7770eb9fe024"
 }
