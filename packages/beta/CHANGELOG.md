@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@1.0.6...@my-scope/beta@1.1.0) (2020-08-28)
+
+
+### Features
+
+* yadayada ([642d7a2](https://github.com/boeriksson/conventionalCommits/commit/642d7a217fcb8c06a54fee45163c17e0fa072276))
+
+
+
+
+
 ## [1.0.6](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@1.0.5...@my-scope/beta@1.0.6) (2020-08-28)
 
 **Note:** Version bump only for package @my-scope/beta
