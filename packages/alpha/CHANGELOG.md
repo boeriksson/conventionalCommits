@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/alpha@1.0.3...@my-scope/alpha@1.0.4) (2020-08-28)
+
+
+### Bug Fixes
+
+* sksks ([b332b90](https://github.com/boeriksson/conventionalCommits/commit/b332b90460c8ebe4c4fd4b7779602b43ad8e3248))
+
+
+
+
+
 ## 1.0.3 (2020-08-28)
 
 
