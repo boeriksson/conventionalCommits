@@ -10,6 +10,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * 2929 ([b092732](https://github.com/boeriksson/conventionalCommits/commit/b092732ab04756a9c3de29ec7e63e22c96f8e07d))
 * jallajalla6 ([02b3bc2](https://github.com/boeriksson/conventionalCommits/commit/02b3bc2cc8a93172a19db572960a7770eb9fe024))
+* setVersion ([5ba0209](https://github.com/boeriksson/conventionalCommits/commit/5ba02097ac1ba09b689d14aa0681b4a216869c51))
+
+
+
+
+
+## [1.0.10](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/usage@1.0.8...@my-scope/usage@1.0.10) (2020-08-28)
+
+
+### Bug Fixes
+
+* 2929 ([b092732](https://github.com/boeriksson/conventionalCommits/commit/b092732ab04756a9c3de29ec7e63e22c96f8e07d))
+* jallajalla6 ([02b3bc2](https://github.com/boeriksson/conventionalCommits/commit/02b3bc2cc8a93172a19db572960a7770eb9fe024))
 
 
 
