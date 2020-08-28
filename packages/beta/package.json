@@ -4,5 +4,6 @@
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
+  "prepublish": "node ../../setVersion @my-scope/beta",
   "gitHead": "02b3bc2cc8a93172a19db572960a7770eb9fe024"
 }

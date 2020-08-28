@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.10](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/usage@1.0.8...@my-scope/usage@1.0.10) (2020-08-28)
+
+
+### Bug Fixes
+
+* 2929 ([b092732](https://github.com/boeriksson/conventionalCommits/commit/b092732ab04756a9c3de29ec7e63e22c96f8e07d))
+* jallajalla6 ([02b3bc2](https://github.com/boeriksson/conventionalCommits/commit/02b3bc2cc8a93172a19db572960a7770eb9fe024))
+
+
+
+
+
 ## [1.0.9](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/usage@1.0.8...@my-scope/usage@1.0.9) (2020-08-28)
 
 
