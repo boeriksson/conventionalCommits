@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@1.1.0...@my-scope/beta@2.0.0) (2020-08-28)
+
+
+### Bug Fixes
+
+* kskssk ([a908368](https://github.com/boeriksson/conventionalCommits/commit/a908368f1f9cb483bf697f858921d8c96de14e3b))
+
+
+### BREAKING CHANGES
+
+* jaffak
+
+
+
+
+
 # [1.1.0](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@1.0.6...@my-scope/beta@1.1.0) (2020-08-28)
 
 
