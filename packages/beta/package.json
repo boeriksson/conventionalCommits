@@ -1,9 +1,9 @@
 {
   "name": "@my-scope/beta",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "publishConfig": {
-    "registry": "http://localhost:4873"
+    "registry": "http://localhost:4873",
+    "prepublish": "node setVersion @my-scope/beta"
   },
-  "prepublish": "node ./setVersion @my-scope/beta",
-  "gitHead": "5ba02097ac1ba09b689d14aa0681b4a216869c51"
+  "gitHead": "030b1427e18fb55afe5fecd94e93744596a78103"
 }
