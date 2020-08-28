@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.0...@my-scope/beta@2.0.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* jallajalla ([8d9dc71](https://github.com/boeriksson/conventionalCommits/commit/8d9dc714adb162672382eb14fa64ef15a617b6ad))
+
+
+
+
+
 # [2.0.0](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@1.1.0...@my-scope/beta@2.0.0) (2020-08-28)
 
 
