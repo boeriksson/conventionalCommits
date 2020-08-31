@@ -4,6 +4,5 @@
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
-  "prepublish": "echo 'PREPUBLISH'",
   "gitHead": "50c398ed321ccc9cefacd4fdfd1f20c6b14a88b1"
 }
