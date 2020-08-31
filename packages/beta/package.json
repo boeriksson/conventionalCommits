@@ -1,6 +1,9 @@
 {
   "name": "@my-scope/beta",
   "version": "2.0.8",
+  "scripts": {
+    "prepublish": "node scripts/prepublish"
+  },
   "publishConfig": {
     "registry": "http://localhost:4873"
   },

@@ -5,11 +5,8 @@
     "@my-scope/alpha": "^1.0.4",
     "@my-scope/beta": "^2.0.8"
   },
-  "scripts": {
-    "prepublish": "node scripts/prepublish"
-  },
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
-  "gitHead": "50c398ed321ccc9cefacd4fdfd1f20c6b14a88b1"
+  "gitHead": "f6a59969741b2ec370ea3668eeee1f6e6f84f257"
 }
