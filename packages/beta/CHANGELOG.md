@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.14](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.13...@my-scope/beta@2.0.14) (2020-08-31)
+
+
+### Bug Fixes
+
+* sksksk ([91d5320](https://github.com/boeriksson/conventionalCommits/commit/91d532013ea6817c53fd0d219fc4cf9d2e07bab2))
+
+
+
+
+
 ## [2.0.13](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.9...@my-scope/beta@2.0.13) (2020-08-31)
 
 
