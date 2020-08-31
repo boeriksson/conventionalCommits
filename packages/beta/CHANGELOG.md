@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.8](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.7...@my-scope/beta@2.0.8) (2020-08-31)
+
+
+### Bug Fixes
+
+* testing prepublish4 ([c03bb8b](https://github.com/boeriksson/conventionalCommits/commit/c03bb8bab3b3fb662009db34b4cab4d9010cbc36))
+
+
+
+
+
 ## [2.0.7](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.6...@my-scope/beta@2.0.7) (2020-08-31)
 
 
