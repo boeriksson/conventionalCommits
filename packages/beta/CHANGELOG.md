@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.0...@my-scope/beta@2.0.5) (2020-08-31)
+
+
+### Bug Fixes
+
+* 2929 ([b092732](https://github.com/boeriksson/conventionalCommits/commit/b092732ab04756a9c3de29ec7e63e22c96f8e07d))
+* jallajalla ([8d9dc71](https://github.com/boeriksson/conventionalCommits/commit/8d9dc714adb162672382eb14fa64ef15a617b6ad))
+* jallajalla6 ([02b3bc2](https://github.com/boeriksson/conventionalCommits/commit/02b3bc2cc8a93172a19db572960a7770eb9fe024))
+* setVersion ([5ba0209](https://github.com/boeriksson/conventionalCommits/commit/5ba02097ac1ba09b689d14aa0681b4a216869c51))
+* setVersion2 ([ddf9fca](https://github.com/boeriksson/conventionalCommits/commit/ddf9fca780ebeb2decff67fe432d793529d52df9))
+* setVersion3 ([030b142](https://github.com/boeriksson/conventionalCommits/commit/030b1427e18fb55afe5fecd94e93744596a78103))
+* setVersion4 ([875f271](https://github.com/boeriksson/conventionalCommits/commit/875f27141af540f549bbcc910f3bdbbe2cb2d9dc))
+* testing prepublish ([54f053f](https://github.com/boeriksson/conventionalCommits/commit/54f053fc7a859149831992c62e728d03114799e2))
+* yet another fix ([9acc5cc](https://github.com/boeriksson/conventionalCommits/commit/9acc5cc93bf033dc8c7ad96d65fe5a71f62bb4b4))
+
+
+
+
+
 ## [2.0.5](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.0...@my-scope/beta@2.0.5) (2020-08-28)
 
 
