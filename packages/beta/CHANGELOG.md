@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.13](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.9...@my-scope/beta@2.0.13) (2020-08-31)
+
+
+### Bug Fixes
+
+* boomshackalack ([d06147b](https://github.com/boeriksson/conventionalCommits/commit/d06147b645abb2214d7ea08d975ab1ddde1c6f54))
+
+
+
+## 2.0.12 (2020-08-31)
+
+
+
+## 2.0.11 (2020-08-31)
+
+
+
+
+
 ## [2.0.9](https://github.com/boeriksson/conventionalCommits/compare/@my-scope/beta@2.0.8...@my-scope/beta@2.0.9) (2020-08-31)
 
 
