@@ -5,6 +5,9 @@
     "@my-scope/alpha": "^1.0.4",
     "@my-scope/beta": "^2.0.8"
   },
+  "scripts": {
+    "prepublish": "node scripts/prepublish"
+  },
   "publishConfig": {
     "registry": "http://localhost:4873"
   },
