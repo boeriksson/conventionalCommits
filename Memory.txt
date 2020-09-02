@@ -1,0 +1,9 @@
+lerna publish --no-git-tag-version --no-push
+    // committar inte versionerna..
+
+lerna ls --since --exclude-dependents
+    listar bara paket som verkligen uppdaterats!
+
+yarn publish --new-version 2.0.10
+
+npx babel-node --inspect --presets @babel/preset-env -- publish.js --inspect
