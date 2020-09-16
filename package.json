@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "publishAll": "node ./publish.js"
+    "publishAll": "babel-node --inspect --presets @babel/preset-env -- publish.js --inspect"
   },
   "devDependencies": {
     "@babel/core": "^7.11.5",
