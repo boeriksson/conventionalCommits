@@ -68,7 +68,7 @@ function changedPackages() {
 }
 
 function getVersionFromConsul(repo, name) {
-    return '13.0.0';
+    return '14.0.0';
 }
 
 function setVersionInConsul(REPO_NAME, name, newVersion) {
@@ -90,6 +90,7 @@ async function getCommitType() {
 function tagGitRepoWithNewVersion(type) {
     const gitRepoVersion = getRepoVersionFromGit()
     const newGitRepoVersion = getNewVersion(gitRepoVersion, type)
+    console.log(`Updating repo version from ${gitRepoVersion} to ${newGitRepoVersion}`)
     osCommand(`git tag -a "v${newGitRepoVersion}" -m "new version"`)
     osCommand(`git push origin "v${newGitRepoVersion}"`)
 }
