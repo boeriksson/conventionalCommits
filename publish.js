@@ -4,7 +4,6 @@
 */
 import {parseCommit} from 'parse-commit-message';
 import gitCommitsSince from 'git-commits-since';
-import detector from 'detect-next-version';
 
 const REPO_NAME = 'test-repo'
 
@@ -23,10 +22,6 @@ function getNewVersion(currentVersion, type) {
     }[type]()
 }
 
-function setVersionInConsul(REPO_NAME, name, newVersion) {
-    return true
-}
-
 function publishPackage(lernaPackage, newVersion) {
     const {execSync} = require('child_process')
 
@@ -39,10 +34,30 @@ function publishPackage(lernaPackage, newVersion) {
         process.exit(0)
     }
     console.log('output: ', output)
+}
+
+function changedPackages() {
+    const {execSync} = require('child_process')
+
+    let output
+
+    try {
+        output = execSync(`npx lerna ls --since --exclude-dependents --json`)
+    } catch (error) {
+        console.info(`No local packages have changed since the last tagged releases.`)
+        process.exit(0)
+    }
 
     return JSON.parse(output.toString())
 }
 
+function getVersionFromConsul(repo, name) {
+    return '1.0.0';
+}
+
+function setVersionInConsul(REPO_NAME, name, newVersion) {
+    return true
+}
 
 async function getCommitType() {
     const {rawCommits} = await gitCommitsSince({cwd: '.'});
@@ -77,34 +92,14 @@ getCommitType()
             console.log('versionChange: %o -> %o ', currentVersion, newVersion)
 
             // Publish with new version
-            //publishPackage(lernaPackage, newVersion);
+            publishPackage(lernaPackage, newVersion);
 
             // Update Consul with new version
-            //setVersionInConsul(REPO_NAME, lernaPackage.name, newVersion)
+            setVersionInConsul(REPO_NAME, lernaPackage.name, newVersion)
         })
     })
     .catch((error) => {
-        console.log(error)
-    })
-
-function changedPackages() {
-    const {execSync} = require('child_process')
-
-    let output
-
-    try {
-        output = execSync(`npx lerna ls --since --exclude-dependents --json`)
-    } catch (error) {
-        console.info(`No local packages have changed since the last tagged releases.`)
-        process.exit(0)
-    }
-    console.log('output: ', output)
-
-    return JSON.parse(output.toString())
-
-}
-
-function getVersionFromConsul(repo, name) {
-    return '1.0.0';
-}
+            console.log(error)
+        }
+    )
 
