@@ -15,5 +15,5 @@ This will:
     1. Decide the new semantic version based on the parsed commit message.
     1. Publish the package with yarn publish.
     1. Set the new version in Consul.
-1. Tag the last published version in git.   
+1. Tag the git repo with an incremented version.   
 

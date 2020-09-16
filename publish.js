@@ -2,8 +2,8 @@
     Manual publish script to publish stuff in a CI pipeline
     Should publish only packages that have changed - not packages dependent of those
 */
-import {parseCommit} from 'parse-commit-message';
-import gitCommitsSince from 'git-commits-since';
+import {parseCommit} from 'parse-commit-message'
+import gitCommitsSince from 'git-commits-since'
 
 const REPO_NAME = 'test-repo'
 
@@ -14,7 +14,6 @@ function getNewVersion(currentVersion, type) {
         throw new Error(`current version is in an invalid format: ${currentVersion}`)
     }
     const [major, minor, patch] = currentVersion.split('.')
-    console.log('major: %o, minor: %o, patch: %o', major, minor, patch)
     return {
         'fix': () => `${major}.${minor}.${Number(patch) + 1}`,
         'feat': () => `${major}.${Number(minor) + 1}.${0}`,
@@ -22,37 +21,56 @@ function getNewVersion(currentVersion, type) {
     }[type]()
 }
 
-function publishPackage(lernaPackage, newVersion) {
+function osCommand(cmd) {
+    console.log('osCommand: ', cmd)
     const {execSync} = require('child_process')
-
     let output
 
     try {
-        output = execSync(`yarn publish ${lernaPackage.location} --new-version "${newVersion}" --no-git-tag-version`)
+        output = execSync(cmd)
     } catch (error) {
-        console.info(`Yarn publish failed!`)
+        console.log('Hjälp')
+        console.info(`os command ${cmd} failed`)
         process.exit(0)
     }
-    console.log('output: ', output)
+    console.log('Hjälp2')
+    return output
+}
+
+function getGitTags() {
+    const output = osCommand('git tag')
+    const tagArray = output.toString('utf-8').split("\n")
+    if (tagArray.length > 1) {
+        tagArray.pop()
+        return tagArray.reverse()
+    }
+    return []
+}
+
+function getRepoVersionFromGit() {
+    let version = '1.0.0'
+    const tags = getGitTags()
+    tags.some((tag) => {
+        if (tag.match(/^v\d+.\d+.\d+$/)) {
+            version = tag.substring(1)
+            return true
+        }
+        return false
+    })
+    return version
+}
+
+function publishPackage(lernaPackage, newVersion) {
+    osCommand(`yarn publish ${lernaPackage.location} --new-version "${newVersion}" --no-git-tag-version`)
 }
 
 function changedPackages() {
-    const {execSync} = require('child_process')
-
-    let output
-
-    try {
-        output = execSync(`npx lerna ls --since --exclude-dependents --json`)
-    } catch (error) {
-        console.info(`No local packages have changed since the last tagged releases.`)
-        process.exit(0)
-    }
-
+    const output = osCommand(`npx lerna ls --since --exclude-dependents --json`)
     return JSON.parse(output.toString())
 }
 
 function getVersionFromConsul(repo, name) {
-    return '3.0.0';
+    return '10.0.0';
 }
 
 function setVersionInConsul(REPO_NAME, name, newVersion) {
@@ -61,31 +79,31 @@ function setVersionInConsul(REPO_NAME, name, newVersion) {
 
 async function getCommitType() {
     const {rawCommits} = await gitCommitsSince({cwd: '.'});
-    console.log('gitcommitssince rawCommits: ', rawCommits)
     const lastCommit = rawCommits[0];
     if (!lastCommit.match(/^(fix|feat):.*/)) {
         throw new Error(`Last commit message do not follow the Conventional Commit convention of starting with "fix:" or "feat:"! Last commit message: ${lastCommit}`)
     }
 
     const commitObj = parseCommit(lastCommit)
-
-    console.log('commitObj: ', commitObj)
     const {header: {type}} = commitObj;
     return type;
 }
 
+function tagGitRepoWithNewVersion(type) {
+    const gitRepoVersion = getRepoVersionFromGit()
+    const newGitRepoVersion = getNewVersion(gitRepoVersion, type)
+    console.log('newGitRepoVersion: ', newGitRepoVersion)
+    osCommand(`git tag -a "v${newGitRepoVersion}"`)
+}
+
 getCommitType()
     .then((type) => {
-        console.log('type: ', type)
-
         // List which packages have changed
         const packagesToPublish = changedPackages()
         packagesToPublish.forEach(lernaPackage => {
-            console.log('publishing package: ' + JSON.stringify(lernaPackage))
 
             // Fetch old version from consul
             const currentVersion = getVersionFromConsul(REPO_NAME, lernaPackage.name)
-            console.log('currentVersion: ', currentVersion)
 
             // Decide new version
             const newVersion = getNewVersion(currentVersion, type)
@@ -98,9 +116,9 @@ getCommitType()
             setVersionInConsul(REPO_NAME, lernaPackage.name, newVersion)
         })
 
+        tagGitRepoWithNewVersion(type)
     })
     .catch((error) => {
             console.log(error)
         }
     )
-

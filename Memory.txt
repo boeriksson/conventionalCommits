@@ -7,3 +7,6 @@ lerna ls --since --exclude-dependents
 yarn publish --new-version 2.0.10
 
 npx babel-node --inspect --presets @babel/preset-env -- publish.js --inspect
+
+yarn add parse-commit-message --ignore-engines
+    // För att komma förbi massa gnäll om att den inte stödjer viss node versio
