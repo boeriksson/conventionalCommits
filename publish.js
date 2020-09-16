@@ -28,7 +28,7 @@ function publishPackage(lernaPackage, newVersion) {
     let output
 
     try {
-        output = execSync(`yarn publish ${lernaPackage.location} --new-version "${newVersion}"`)
+        output = execSync(`yarn publish ${lernaPackage.location} --new-version "${newVersion}" --no-git-tag-version`)
     } catch (error) {
         console.info(`Yarn publish failed!`)
         process.exit(0)
@@ -97,6 +97,7 @@ getCommitType()
             // Update Consul with new version
             setVersionInConsul(REPO_NAME, lernaPackage.name, newVersion)
         })
+
     })
     .catch((error) => {
             console.log(error)
