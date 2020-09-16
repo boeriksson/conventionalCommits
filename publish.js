@@ -29,11 +29,9 @@ function osCommand(cmd) {
     try {
         output = execSync(cmd)
     } catch (error) {
-        console.log('Hjälp')
         console.info(`os command ${cmd} failed`)
         process.exit(0)
     }
-    console.log('Hjälp2')
     return output
 }
 
@@ -70,7 +68,7 @@ function changedPackages() {
 }
 
 function getVersionFromConsul(repo, name) {
-    return '12.0.0';
+    return '13.0.0';
 }
 
 function setVersionInConsul(REPO_NAME, name, newVersion) {
@@ -92,11 +90,8 @@ async function getCommitType() {
 function tagGitRepoWithNewVersion(type) {
     const gitRepoVersion = getRepoVersionFromGit()
     const newGitRepoVersion = getNewVersion(gitRepoVersion, type)
-    console.log('newGitRepoVersion: ', newGitRepoVersion)
     osCommand(`git tag -a "v${newGitRepoVersion}" -m "new version"`)
-    console.log('tagged')
     osCommand(`git push origin "v${newGitRepoVersion}"`)
-    console.log('tag pushed')
 }
 
 getCommitType()
