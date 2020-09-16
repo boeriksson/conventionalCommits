@@ -1,5 +1,17 @@
-# Example how to make Semantic Release with Lerna nad Conventional Commits
+#Publish
 
-Boilerplate used in article [Semantic Release with Lerna and Conventional Commits](https://michaljanaszek.com/blog/lerna-conventional-commits)
+Publish will be performed by the CI pipeline by executing: 
 
-Code used in this repo is based on [reggi/lerna-tutorial](https://github.com/reggi/lerna-tutorial)
+yarn run publishAll 
+
+This will: 
+
+1. Fetch the last commit message
+1. Abort if commit message is not in an appropriate format according to conventional commits
+1. Parse the commit message
+1. Use lerna to check if any packages has changed since the last tagged version! (Tagging is done at the end of the publish script, after a successful publish)
+1. For each UPDATED package: 
+    1. Fetch the current version of the package from Consul - if no previous package has been published, version is set to 1.0.0
+    1. Decide the new semantic version based on the parsed commit message.
+    1. Publish the package with yarn publish     
+

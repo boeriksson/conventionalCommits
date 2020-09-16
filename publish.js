@@ -52,7 +52,7 @@ function changedPackages() {
 }
 
 function getVersionFromConsul(repo, name) {
-    return '1.0.0';
+    return '3.0.0';
 }
 
 function setVersionInConsul(REPO_NAME, name, newVersion) {
