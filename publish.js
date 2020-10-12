@@ -68,7 +68,7 @@ function changedPackages() {
 }
 
 function getVersionFromConsul(repo, name) {
-    return '15.0.0';
+    return '17.0.0';
 }
 
 function setVersionInConsul(REPO_NAME, name, newVersion) {

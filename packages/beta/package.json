@@ -1,6 +1,6 @@
 {
   "name": "@my-scope/beta",
-  "version": "15.1.0",
+  "version": "16.0.1",
   "scripts": {
     "prepublish": "node scripts/prepublish"
   },
